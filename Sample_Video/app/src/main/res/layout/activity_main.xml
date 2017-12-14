@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dqh.project.hour.view.ResideLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f00f">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杨小胖 "/>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="dqh.project.hour.activity.MainActivity"
+        android:background="#fff0">
+        <include layout="@layout/layout_toolbar"
+            android:id="@+id/main_header"/>
+        <com.ashokvarma.bottomnavigation.BottomNavigationBar
+            android:id="@+id/main_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y128"
+            android:layout_alignParentBottom="true">
+
+        </com.ashokvarma.bottomnavigation.BottomNavigationBar>
+        <FrameLayout
+            android:layout_below="@+id/main_header"
+            android:layout_above="@+id/main_footer"
+            android:layout_width="match_parent"
+            android:id="@+id/main_frame"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </RelativeLayout>
+</dqh.project.hour.view.ResideLayout>
+
