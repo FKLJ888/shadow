@@ -14,7 +14,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import xp.project.hour.R;
+import dqh.project.hour.R;
 import dqh.project.hour.fragment.MyFragment;
 import dqh.project.hour.fragment.SpecialFragment;
 import dqh.project.hour.fragment.FancyFragment;

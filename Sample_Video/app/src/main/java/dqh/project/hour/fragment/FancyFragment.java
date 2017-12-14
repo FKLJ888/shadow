@@ -3,9 +3,9 @@ package dqh.project.hour.fragment;
 import android.view.View;
 import android.widget.TextView;
 
+import dqh.project.hour.R;
 import dqh.project.hour.mvp.P.FancyPresenter;
 import dqh.project.hour.mvp_base.BaseFragment;
-import xp.project.hour.R;
 
 /**
  * Created by Love_you on 2017/12/14 0014.
