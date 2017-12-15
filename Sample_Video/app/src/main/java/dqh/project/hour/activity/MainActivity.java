@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,10 +20,12 @@ import dqh.project.hour.fragment.MyFragment;
 import dqh.project.hour.fragment.SpecialFragment;
 import dqh.project.hour.fragment.FancyFragment;
 import dqh.project.hour.fragment.FoundFragment;
+import dqh.project.hour.mvp.P.FoundPresenter;
+import dqh.project.hour.mvp_base.BaseActivity;
 
 //底部导航栏
 //compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity<FoundPresenter> implements View.OnClickListener {
     private TextView home_title;
     private ImageView home_edit;
     private BottomNavigationBar main_footer;
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //设置无标题栏
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initView();
         initData();
@@ -86,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void initBottomNavigationBar() {
         //设置显示模式 ：普通模式
-        main_footer.setMode(BottomNavigationBar.MODE_SHIFTING);
+//        main_footer.setMode(BottomNavigationBar.MODE_SHIFTING);
         //设置背景风格 ：背景颜色波纹改变
         main_footer.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
 

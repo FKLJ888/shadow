@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.gyf.barlibrary.ImmersionBar;
+
+import dqh.project.hour.R;
 import dqh.project.hour.utils.CreateObjUtil;
 
 /**
@@ -16,7 +19,7 @@ public abstract class BaseActivity<P extends Basepresenter> extends AppCompatAct
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        ImmersionBar.with(this).barColor(R.color.colorPrimary).init();
+        ImmersionBar.with(this).barColor(R.color.appBlue).init();
         mPresenter= CreateObjUtil.getT(this,0);
         //进行绑定
         mPresenter.attachView(this);
@@ -29,6 +32,6 @@ public abstract class BaseActivity<P extends Basepresenter> extends AppCompatAct
         if(mPresenter!=null){
             mPresenter.destoryView();
         }
-//        ImmersionBar.with(this).destroy();
+        ImmersionBar.with(this).destroy();
     }
 }
